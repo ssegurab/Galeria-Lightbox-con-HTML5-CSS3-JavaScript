@@ -1,55 +1,75 @@
-@import 'imports/_variables' , 'imports/_mixins' , 'imports/_reset' ,'imports/_keyframes';
-
-.ul{
+@import 'imports/_variables',
+'imports/_mixins',
+'imports/_reset',
+'imports/_keyframes';
+.ul {
     width: 80%;
     background: lightgrey;
     padding: 1em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;  
-
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 1em;
     @include neo(1, 1em, 1em);
 }
-.ul .li{
+
+.ul .li {
     overflow: hidden;
     @include neo(1, 1em, 1em);
 }
-.ul .a{}
-.ul .img{
+
+.ul .a {}
+
+.ul .img {
     /* height: 20vh; */
     transition: all .5s ease;
     transform: scale(1.4);
 }
-.ul .li:hover .img{
+
+.ul .li:hover .img {
     transform: scale(1);
 }
 
-.lightbox{
+.lightbox {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,555,255,.8);
+    background: rgba(255, 555, 255, .8);
     z-index: 2;
-
     @include flex(column, nowrap, center, center);
     display: none;
 }
-.lightbox.activo{
+
+.lightbox.activo {
     display: flex;
 }
-.lightbox .cerrar{
+
+.lightbox .cerrar {
     width: 5em;
     height: 3em;
     background: orange;
     margin: 0 0 1em;
-
     @include neo(1, 1em, .5em);
 }
-.lightbox .grande{
+
+.lightbox .grande {
     width: 80%;
     height: 80vh;
     background: lightblue;
     @include neo(1, 1em, 1em);
+}
+
+@media screen and(max-width: 768px) {
+    .ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and(max-width: 576px) {
+    .ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
