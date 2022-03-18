@@ -25,11 +25,10 @@ enlaces.forEach((cadaEnlace, i) => {
         lightbox.classList.add('activo')
         grande.setAttribute('src', rutaImg)
 
-
     });
 });
 
 cerrar.addEventListener('click', () => {
     lightbox.classList.remove('activo')
-    grande.setAttribute('src', '')
+        /* grande.setAttribute('src', '') */
 })
