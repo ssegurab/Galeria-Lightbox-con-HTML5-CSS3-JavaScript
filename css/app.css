@@ -24,13 +24,13 @@ img{
 
 .ul {
     width: 80%;
+    height: 80vh;
     background: lightgrey;
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 80%;
     gap: 1em;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
     border-radius: 1em;
     background-color: #393939;
     box-shadow: 1em 1em 2em;
@@ -65,13 +65,15 @@ img{
     justify-content: center;
     align-items: center;
     transform: scale(1.1);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     pointer-events: none;
-    display: none;
+    /* display: none; */
+    opacity: 0;
 }
 
 .lightbox.activo {
-    display: flex;
+    /* display: flex; */
+    opacity: 1;
     transform: scale(1);
     pointer-events: auto;
 }
@@ -82,7 +84,7 @@ img{
     background: #393939;
     color: white;
     margin: 0 0 1em;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
     border-radius: 1em;
     box-shadow: 1em 1em 2em #393939;
     cursor: pointer;
@@ -91,7 +93,7 @@ img{
 .lightbox .cerrar:hover {
     background: white;
     color: #393939;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
     border-radius: 1em;
     box-shadow: 1em 1em 1em #393939;
 }
@@ -99,9 +101,23 @@ img{
 .lightbox .grande {
     width: 80%;
     height: 80vh;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
     border-radius: 1em;
     box-shadow: 1em 1em 2em;
+}
+
+@media screen and (max-width: 1400px) and (orientation: portrait) {
+    .ul {
+        grid-template-columns: repeat(1, 1fr);    
+        width: 80%;
+        height: 85vh;
+    }
+}
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+    .ul {
+        grid-template-columns: repeat(2, 1fr);    
+        width: 90%;
+    }
 }
 
 

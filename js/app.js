@@ -13,8 +13,8 @@
 
 const enlaces = document.querySelectorAll(".ul .a");
 const lightbox = document.querySelector(".lightbox");
-const grande = document.querySelector('.grande')
-const cerrar = document.querySelector('.cerrar')
+const grande = document.querySelector('.grande');
+const cerrar = document.querySelector('.cerrar');
 
 enlaces.forEach((cadaEnlace, i) => {
     enlaces[i].addEventListener("click", (e) => {
@@ -30,4 +30,4 @@ enlaces.forEach((cadaEnlace, i) => {
 cerrar.addEventListener('click', () => {
     lightbox.classList.remove('activo')
     /* grande.setAttribute('src', '') */
-})
+});
